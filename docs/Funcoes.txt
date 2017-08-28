@@ -1,32 +1,32 @@
-Produto
+Produto (product)
 {name, description, purchasePrice, salePrice, sectionId, providerId, stock}
 
-Fornecedor
+Fornecedor (provider)
 {name,cnpj,fone,email,description}
 
-Funcionário
+Funcionário (employee)
 {name,cpf,rg,fone,email,birthdate,functionId}
 
-Usuário
+Usuário (user)
 {employeeId,userType,password}
 
-Função
+Função (function)
 {functionId, name, description,salary}
 
-Setor
+Setor (section)
 {sectionId,name,description}
 
-Venda
+Venda (sale)
 {saleId, itens, date, totalPrice, formOfPayment}
 
-Compra
+Compra (purchase)
 {purchaseId, itens, date, totalPrice}
 
-Perda
-{productLostId, productId, date, quantity}
+Perda (productLost)
+{productLostId, productId, date, reason, quantity}
 
-Bonificação
-{productBonusId, productId, date, quantity}
+Bonificação (bonus)
+{productBonusId, productId, date, reason, quantity}
 
-Despesa
+Despesa (expense)
 {expenseId, description, value, paid}
