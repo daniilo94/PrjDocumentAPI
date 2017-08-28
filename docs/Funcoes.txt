@@ -1,0 +1,32 @@
+Produto
+{name, description, purchasePrice, salePrice, sectionId, providerId, stock}
+
+Fornecedor
+{name,cnpj,fone,email,description}
+
+Funcionário
+{name,cpf,rg,fone,email,birthdate,functionId}
+
+Usuário
+{employeeId,userType,password}
+
+Função
+{functionId, name, description,salary}
+
+Setor
+{sectionId,name,description}
+
+Venda
+{saleId, itens, date, totalPrice, formOfPayment}
+
+Compra
+{purchaseId, itens, date, totalPrice}
+
+Perda
+{productLostId, productId, date, quantity}
+
+Bonificação
+{productBonusId, productId, date, quantity}
+
+Despesa
+{expenseId, description, value, paid}
