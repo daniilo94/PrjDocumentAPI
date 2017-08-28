@@ -27,15 +27,15 @@ and open the template in the editor.
         </style>
     </head>
     <?php
-    include './a.php';
+    include './functions.php';
     
     $nome_uri = $_POST['nome_uri'];
     $nome_tabela = $_POST['nome_tabela'];
     
     $body_response;
-    $response_ok = '{<br>
-“code”:200,<br>
-“message”:”Ok”<br>
+    $response_ok = '{ 
+“code”:200, 
+“message”:”Ok” 
 }
 ';
 
@@ -52,6 +52,7 @@ and open the template in the editor.
 //    }
     ?>
     <body>
+        <h2><?php echo ucfirst($nome_uri); ?></h2>
         <table>
             <tr>
                 <th>Method</th>

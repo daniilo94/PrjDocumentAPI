@@ -11,7 +11,7 @@ and open the template in the editor.
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </head>
     <body>
-        <form method="POST" action="function.php">
+        <form method="POST" action="table.php">
             <label>Nome na URI:</label>
             <input type="text" name="nome_uri" value="product"/>
 

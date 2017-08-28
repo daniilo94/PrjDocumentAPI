@@ -20,13 +20,13 @@ Venda (sale)
 {saleId, itens, date, totalPrice, formOfPayment}
 
 Compra (purchase)
-{purchaseId, itens, date, totalPrice}
+{itens, date, totalPrice, providerId, finished}
 
 Perda (productLost)
-{productLostId, productId, date, reason, quantity}
+{productId, date, reason, quantity, totalPrice}
 
 Bonificação (bonus)
-{productBonusId, productId, date, reason, quantity}
+{productId, date, reason, quantity}
 
 Despesa (expense)
-{expenseId, description, value, paid}
+{description, value, paid, description}
