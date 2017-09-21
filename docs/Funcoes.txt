@@ -30,3 +30,11 @@ Bonificação (bonus)
 
 Despesa (expense)
 {description, value, paid, description}
+
+
+respostas
+POST
+    {"400", "Bad request"},
+    {"405", "Method not allowed"},
+    {"404", "Object not found"},
+    {"500", "Internal server error"}

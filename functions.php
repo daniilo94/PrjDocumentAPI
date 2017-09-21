@@ -9,7 +9,7 @@ function body_request1($size){
         if ($i == $size)
             $body_request2 = $body_request2 . '"' . $_POST['atributo' . $i] . '": ' . $valor . '';
         else
-            $body_request2 = $body_request2 . '"' . $_POST['atributo' . $i] . '": ' . $valor . ', ';
+            $body_request2 = $body_request2 . '"' . $_POST['atributo' . $i] . '": ' . $valor . ', <br>';
     }
     $body_request2 = '{ ' . $body_request2 . ' }';
     return $body_request2;
@@ -37,7 +37,7 @@ function database_query1($size){
 }
 
 function body_request2($size){
-    $body_request2 = '"'.$_POST['nome_uri'].'Id":1, ';
+    $body_request2 = '"'.$_POST['nome_uri'].'Id":1, <br>';
     for ($i = 1; $i <= $size; $i++) {
         $valor = $_POST['valor' . $i];
         if(!is_numeric($valor))
@@ -46,7 +46,7 @@ function body_request2($size){
         if ($i == $size)
             $body_request2 = $body_request2 . '"' . $_POST['atributo' . $i] . '": ' . $valor . '';
         else
-            $body_request2 = $body_request2 . '"' . $_POST['atributo' . $i] . '": ' . $valor . ', ';
+            $body_request2 = $body_request2 . '"' . $_POST['atributo' . $i] . '": ' . $valor . ', <br>';
     }
     $body_request2 = '{ ' . $body_request2 . ' }';
     return $body_request2;
@@ -69,6 +69,18 @@ function database_query2($size){
     }
     $query = 'UPDATE '.$_POST['nome_tabela'].' SET '.$atrs. ' WHERE id_'.$_POST['nome_uri'].'=1';
     return $query;
+}
+
+function allowedValues($size){
+    $al = '';
+    for ($i = 1; $i <= $size; $i++) {
+        if ($i == $size){
+            $al = $al . $_POST['atributo' . $i];
+        } else {
+            $al = $al . $_POST['atributo' . $i] . ', ';
+        }
+    }
+    return $al;
 }
 
 function database_query3(){
